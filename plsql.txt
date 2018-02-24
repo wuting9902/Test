@@ -1,0 +1,26 @@
+﻿col col_name for a20
+set linesize 80
+set pagesize 20
+set feedback on|off  フッタ設定
+
+select 10*10 from dual;
+select v$nls_parameters
+alter session set col_name='XX'
+select XXX from XXX where XXX like '%_%';	至少含有一个字符
+select XXX from XXX where XXX like '%\_%' escape '\' ; 提示反斜杠是转义字符而非字符串'
+
+select col_name ,count(*) from table group by col_name having count(*) > 3;  
+nvl2(列，不为空时显示的值，为空时显示的值)
+nullif（str1，str2）    if str1==str2→null  else str1
+select col_name1 case col_name2 when ・・・ then　・・・
+								when　・・・ then　・・・
+end (as) newcol_name from table
+
+select col_name3 decode(col_name,'XXX',col_name2+1,
+								'YYY',col_name2+2)
+								(as) newcol_name from table
+								
+select ... group by  语句时 group by 后的列名必须和select语句后的列名保持一致 并且 group by 后的列数必须和除count，12*12等列以外的列数保持一致
+								
+								
+								
